@@ -1,4 +1,7 @@
 <?
+ob_start();
+session_start();
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Airtable API Configuration
