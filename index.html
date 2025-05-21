@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,63 +5,68 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mike - Technology Veteran</title>
   <meta name="description" content="Mike is a technology industry veteran with over 32 years of experience, from Sun Microsystems to leading innovative tech ventures.">
-  
+
   <!-- Open Graph tags for better social sharing -->
   <meta property="og:title" content="Mike - Technology Veteran">
   <meta property="og:description" content="Mike is a technology industry veteran with over 32 years of experience, from Sun Microsystems to leading innovative tech ventures.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://yourdomain.com">
-  
+
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="./assets/mw2.png">
-  
+
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  
+
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
+
   <style>
     :root {
       --forest: 145, 41%, 38%;
       --forest-dark: 145, 41%, 28%;
       --forest-light: 145, 41%, 92%;
-      --slate: 210, 22%, 49%;
-      --slate-dark: 210, 22%, 39%;
+      --slate: 145, 41%, 49%;
+      --slate-dark: 145, 41%, 39%;
       --text-primary: #333333;
       --text-secondary: #666666;
     }
-    
+
     /* Reset & Base Styles */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
-    
+
     html {
       scroll-behavior: smooth;
     }
-    
+
     body {
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       line-height: 1.6;
       color: var(--text-primary);
       background-color: #ffffff;
     }
-    
+
     img {
       max-width: 100%;
       height: auto;
     }
-    
+
     a {
-      color: inherit;
-      text-decoration: none;
-    }
-    
+    color: inherit;
+    text-decoration: none;
+  }
+
+  a:not(.logo):not(.social-link):not(.footer-nav a):hover {
+    color: hsl(var(--forest));
+    text-decoration: underline;
+  }
+
     /* Container */
     .container {
       width: 100%;
@@ -70,13 +74,13 @@
       margin: 0 auto;
       padding: 0 1rem;
     }
-    
+
     @media (min-width: 768px) {
       .container {
         padding: 0 2rem;
       }
     }
-    
+
     /* Header */
     header {
       position: sticky;
@@ -87,30 +91,30 @@
       border-bottom: 1px solid #e0e0e0;
       transition: all 0.3s ease;
     }
-    
+
     header.scrolled {
       box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     }
-    
+
     .header-container {
       display: flex;
       justify-content: space-between;
       align-items: center;
       height: 4rem;
     }
-    
+
     @media (min-width: 768px) {
       .header-container {
         height: 5rem;
       }
     }
-    
+
     .logo {
       font-size: 1.5rem;
       font-weight: 700;
       color: hsl(var(--forest));
     }
-    
+
     .nav-toggle {
       display: block;
       background: none;
@@ -119,32 +123,32 @@
       cursor: pointer;
       color: var(--text-primary);
     }
-    
+
     @media (min-width: 768px) {
       .nav-toggle {
         display: none;
       }
     }
-    
+
     .desktop-nav {
       display: none;
     }
-    
+
     @media (min-width: 768px) {
       .desktop-nav {
         display: flex;
         gap: 2rem;
         font-weight: 500;
       }
-      
+
       .desktop-nav a {
         position: relative;
       }
-      
+
       .desktop-nav a:hover {
         color: hsl(var(--forest));
       }
-      
+
       .desktop-nav a::after {
         content: '';
         position: absolute;
@@ -156,12 +160,12 @@
         transform: scaleX(0);
         transition: transform 0.3s ease;
       }
-      
+
       .desktop-nav a:hover::after {
         transform: scaleX(1);
       }
     }
-    
+
     .mobile-nav {
       display: none;
       flex-direction: column;
@@ -169,100 +173,100 @@
       background-color: #f8f8f8;
       border-bottom: 1px solid #e0e0e0;
     }
-    
+
     .mobile-nav.show {
       display: flex;
     }
-    
+
     .mobile-nav a {
       padding: 0.5rem 0;
       font-weight: 500;
     }
-    
+
     .mobile-nav a:hover {
       color: hsl(var(--forest));
     }
-    
+
     /* Hero Section */
     .hero {
       padding: 3rem 0 5rem;
     }
-    
+
     @media (min-width: 768px) {
       .hero {
         padding: 5rem 0 8rem;
       }
     }
-    
+
     .hero-grid {
       display: grid;
       grid-template-columns: 1fr;
       gap: 3rem;
       align-items: center;
     }
-    
+
     @media (min-width: 992px) {
       .hero-grid {
         grid-template-columns: 3fr 2fr;
       }
     }
-    
+
     .hero-content {
       display: flex;
       flex-direction: column;
       gap: 1.5rem;
     }
-    
+
     .hero-greeting {
       color: hsl(var(--forest));
       font-weight: 500;
       margin-bottom: 0.5rem;
     }
-    
+
     .hero-title {
       font-size: 2.25rem;
       line-height: 1.2;
       font-weight: 700;
     }
-    
+
     @media (min-width: 768px) {
       .hero-title {
         font-size: 3rem;
       }
     }
-    
+
     @media (min-width: 1280px) {
       .hero-title {
         font-size: 3.75rem;
       }
     }
-    
+
     .hero-subtitle {
       font-size: 1.5rem;
       font-weight: 500;
       color: hsl(var(--slate));
-      margin-top: 0.5rem;
+      margin-top: -0.5rem;
     }
-    
+
     @media (min-width: 768px) {
       .hero-subtitle {
         font-size: 1.875rem;
       }
     }
-    
+
     .hero-bio {
       font-size: 1.125rem;
       max-width: 32rem;
       line-height: 1.6;
       margin-top: 1rem;
     }
-    
+
     @media (min-width: 768px) {
       .hero-bio {
         font-size: 1.25rem;
       }
     }
-    
+
     .cta-button {
       display: inline-block;
       padding: 0.75rem 1.5rem;
@@ -274,22 +278,22 @@
       transition: background-color 0.3s ease;
       margin-top: 1rem;
     }
-    
+
     .cta-button:hover {
       background-color: hsl(var(--forest-dark));
     }
-    
+
     .hero-image {
       display: flex;
       justify-content: center;
     }
-    
+
     @media (min-width: 992px) {
       .hero-image {
         justify-content: flex-end;
       }
     }
-    
+
     .hero-portrait {
       width: 16rem;
       height: 16rem;
@@ -298,159 +302,160 @@
       border: 4px solid white;
       box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
     }
-    
+
     @media (min-width: 768px) {
       .hero-portrait {
         width: 20rem;
         height: 20rem;
       }
     }
-    
+
     /* Section Styles */
     section {
       padding: 5rem 0;
     }
-    
+
     .bg-light {
       background-color: #f8f8f8;
     }
-    
+
     .section-header {
       max-width: 48rem;
       margin: 0 auto 4rem;
       text-align: center;
     }
-    
+
     .section-title {
       font-size: 1.875rem;
       font-weight: 700;
       margin-bottom: 1rem;
     }
-    
+
     @media (min-width: 768px) {
       .section-title {
         font-size: 2.25rem;
       }
     }
-    
+
     .section-divider {
       width: 4rem;
       height: 0.25rem;
       background-color: hsl(var(--forest));
       margin: 0 auto 1.5rem;
     }
-    
+
     .section-description {
       font-size: 1.125rem;
       color: rgba(51, 51, 51, 0.8);
     }
-    
+
     /* About Section */
     .about-grid {
       display: grid;
       grid-template-columns: 1fr;
       gap: 3rem;
     }
-    
+
     @media (min-width: 768px) {
       .about-grid {
         grid-template-columns: 1fr 1fr;
       }
     }
-    
+
     .about-image-container {
       display: flex;
       justify-content: center;
       align-items: flex-start;
     }
-    
+
     .bio-content {
       display: flex;
       flex-direction: column;
       gap: 1.5rem;
     }
-    
+
     .bio-paragraph {
       font-size: 1.05rem;
       color: rgba(51, 51, 51, 0.9);
       line-height: 1.7;
     }
-    
+
     .values-interests {
       display: grid;
       grid-template-columns: 1fr;
       gap: 2rem;
       margin-top: 2.5rem;
     }
-    
+
     @media (min-width: 992px) {
       .values-interests {
         grid-template-columns: 1fr 2fr;
       }
     }
-    
+
     .values-container, .interests-container {
       padding: 1.5rem;
       background-color: white;
       border-radius: 0.5rem;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
     }
-    
+
     .container-title {
       font-size: 1.25rem;
       font-weight: 600;
       margin-bottom: 1rem;
       color: hsl(var(--forest));
     }
-    
+
     .values-list {
       display: flex;
       flex-direction: column;
       gap: 0.75rem;
     }
-    
+
     .interests-grid {
       display: grid;
       grid-template-columns: 1fr;
       gap: 0.75rem;
     }
-    
+
     @media (min-width: 640px) {
       .interests-grid {
         grid-template-columns: 1fr 1fr;
       }
     }
-    
+
     .value-item, .interest-item {
       display: flex;
       align-items: center;
       gap: 0.5rem;
       font-size: 1.05rem;
     }
-    
+
     .value-item i, .interest-item i {
       color: hsl(var(--forest));
     }
-    
+
     /* Experience Section */
     .experience-container {
       max-width: 64rem;
       margin: 0 auto;
     }
-    
+
     .experience-card {
       margin-bottom: 2rem;
       background-color: white;
       border-radius: 0.5rem;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
       padding: 1.5rem 2rem;
+      border: 1px solid #ddd; /* Added border for better visibility */
     }
-    
+
     .experience-grid {
       display: flex;
       flex-direction: row;
     }
-    
+
     .experience-logo {
       width: 75px;
       margin-right: 1.5rem;
@@ -459,24 +464,24 @@
       justify-content: center;
       align-items: flex-start;
     }
-    
+
     .experience-logo img {
       max-height: 48px;
       width: auto;
       max-width: 100%;
       object-fit: contain;
     }
-    
+
     .experience-content {
       flex: 1;
     }
-    
+
     .experience-header {
       display: flex;
       flex-direction: column;
       margin-bottom: 1rem;
     }
-    
+
     @media (min-width: 768px) {
       .experience-header {
         flex-direction: row;
@@ -484,46 +489,46 @@
         align-items: flex-start;
       }
     }
-    
+
     .experience-title {
       font-size: 1.25rem;
       font-weight: 600;
     }
-    
+
     .experience-company {
       color: hsl(var(--slate));
       font-weight: 500;
     }
-    
+
     .experience-period {
       color: hsl(var(--forest));
       font-weight: 500;
       margin-top: 0.5rem;
       white-space: nowrap;
     }
-    
+
     @media (min-width: 768px) {
       .experience-period {
         margin-top: 0;
       }
     }
-    
+
     .experience-details {
       margin-top: 1rem;
       color: rgba(51, 51, 51, 0.8);
     }
-    
+
     .experience-details p {
       margin-bottom: 0.5rem;
     }
-    
+
     /* Skills Section */
     .skills-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
       gap: 1.5rem;
     }
-    
+
     .skill-card {
       background-color: white;
       border-radius: 0.5rem;
@@ -533,14 +538,14 @@
       flex-direction: column;
       height: 100%;
     }
-    
+
     .skill-header {
       display: flex;
       align-items: center;
       margin-bottom: 1rem;
       gap: 1rem;
     }
-    
+
     .skill-icon {
       width: 2.5rem;
       height: 2.5rem;
@@ -552,25 +557,25 @@
       border-radius: 0.375rem;
       font-size: 1.25rem;
     }
-    
+
     .skill-title {
       font-size: 1.125rem;
       font-weight: 600;
     }
-    
+
     .skill-description {
       font-size: 0.975rem;
       color: var(--text-secondary);
       margin-bottom: 1rem;
       flex-grow: 1;
     }
-    
+
     .skill-tags {
       display: flex;
       flex-wrap: wrap;
       gap: 0.5rem;
     }
-    
+
     .skill-tag {
       font-size: 0.75rem;
       background-color: #f1f5f9;
@@ -578,14 +583,14 @@
       padding: 0.25rem 0.5rem;
       border-radius: 1rem;
     }
-    
+
     /* Projects Section */
     .projects-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
       gap: 1.5rem;
     }
-    
+
     .project-card {
       background-color: white;
       border-radius: 0.5rem;
@@ -595,56 +600,56 @@
       flex-direction: column;
       height: 100%;
     }
-    
+
     .project-image {
       height: 180px;
       overflow: hidden;
     }
-    
+
     .project-image img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       transition: transform 0.3s ease;
     }
-    
+
     .project-card:hover .project-image img {
       transform: scale(1.05);
     }
-    
+
     .project-content {
       padding: 1.5rem;
       flex-grow: 1;
       display: flex;
       flex-direction: column;
     }
-    
+
     .project-category {
       color: hsl(var(--forest));
       font-size: 0.875rem;
       font-weight: 500;
       margin-bottom: 0.5rem;
     }
-    
+
     .project-title {
       font-size: 1.25rem;
       font-weight: 600;
       margin-bottom: 0.75rem;
     }
-    
+
     .project-description {
       font-size: 0.975rem;
       color: var(--text-secondary);
       margin-bottom: 1.5rem;
       flex-grow: 1;
     }
-    
+
     .project-tags {
       display: flex;
       flex-wrap: wrap;
       gap: 0.5rem;
     }
-    
+
     .project-tag {
       font-size: 0.75rem;
       background-color: #f1f5f9;
@@ -652,51 +657,51 @@
       padding: 0.25rem 0.5rem;
       border-radius: 1rem;
     }
-    
+
     /* Contact Section */
     .contact-container {
       display: grid;
       grid-template-columns: 1fr;
       gap: 3rem;
     }
-    
+
     @media (min-width: 768px) {
       .contact-container {
         grid-template-columns: 1fr 1fr;
       }
     }
-    
+
     .contact-info {
       display: flex;
       flex-direction: column;
       gap: 1.5rem;
     }
-    
+
     .contact-heading {
       font-size: 1.5rem;
       font-weight: 600;
       color: hsl(var(--forest));
       margin-bottom: 0.5rem;
     }
-    
+
     .contact-description {
       font-size: 1.05rem;
       color: var(--text-secondary);
       margin-bottom: 1rem;
     }
-    
+
     .contact-details {
       display: flex;
       flex-direction: column;
       gap: 1rem;
     }
-    
+
     .contact-item {
       display: flex;
       align-items: center;
       gap: 0.75rem;
     }
-    
+
     .contact-icon {
       width: 2.5rem;
       height: 2.5rem;
@@ -708,39 +713,39 @@
       border-radius: 0.375rem;
       font-size: 1.125rem;
     }
-    
+
     .contact-text {
       display: flex;
       flex-direction: column;
     }
-    
+
     .contact-label {
       font-size: 0.875rem;
       color: var(--text-secondary);
     }
-    
+
     .contact-value {
       font-weight: 500;
     }
-    
+
     .contact-form {
       background-color: white;
       border-radius: 0.5rem;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
       padding: 2rem;
     }
-    
+
     .form-group {
       margin-bottom: 1.5rem;
     }
-    
+
     .form-label {
       display: block;
       font-weight: 500;
       font-size: 0.975rem;
       margin-bottom: 0.5rem;
     }
-    
+
     .form-control {
       width: 100%;
       padding: 0.75rem;
@@ -749,18 +754,18 @@
       font-size: 1rem;
       font-family: inherit;
     }
-    
+
     .form-control:focus {
       outline: none;
       border-color: hsl(var(--forest));
       box-shadow: 0 0 0 3px hsla(var(--forest), 0.2);
     }
-    
+
     textarea.form-control {
       min-height: 10rem;
       resize: vertical;
     }
-    
+
     .form-button {
       width: 100%;
       padding: 0.75rem 1rem;
@@ -772,11 +777,11 @@
       cursor: pointer;
       transition: background-color 0.3s ease;
     }
-    
+
     .form-button:hover {
       background-color: hsl(var(--forest-dark));
     }
-    
+
     .form-message {
       margin-top: 1rem;
       padding: 0.75rem;
@@ -784,28 +789,28 @@
       font-size: 0.875rem;
       display: none;
     }
-    
+
     .form-message.success {
       display: block;
       background-color: #ecfdf5;
       color: #065f46;
       border: 1px solid #10b981;
     }
-    
+
     .form-message.error {
       display: block;
       background-color: #fef2f2;
       color: #991b1b;
       border: 1px solid #ef4444;
     }
-    
+
     /* Footer */
     footer {
       background-color: #f8f8f8;
       border-top: 1px solid #e0e0e0;
       padding: 3rem 0;
     }
-    
+
     .footer-container {
       display: flex;
       flex-direction: column;
@@ -813,13 +818,13 @@
       text-align: center;
       gap: 1.5rem;
     }
-    
+
     .footer-logo {
       font-size: 1.5rem;
       font-weight: 700;
       color: hsl(var(--forest));
     }
-    
+
     .footer-nav {
       display: flex;
       flex-wrap: wrap;
@@ -827,17 +832,17 @@
       gap: 1.5rem;
       font-weight: 500;
     }
-    
+
     .footer-nav a:hover {
       color: hsl(var(--forest));
       text-decoration: underline;
     }
-    
+
     .social-links {
       display: flex;
       gap: 1rem;
     }
-    
+
     .social-link {
       width: 2.5rem;
       height: 2.5rem;
@@ -851,15 +856,21 @@
       transition: background-color 0.3s ease, color 0.3s ease;
       box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     }
-    
+
     .social-link:hover {
       background-color: hsl(var(--forest));
       color: white;
     }
-    
+
     .copyright {
       font-size: 0.875rem;
       color: var(--text-secondary);
+    }
+
+    /* Custom link styles */
+    .green-link {
+      color: green;
+      text-decoration: underline;
     }
   </style>
 </head>
@@ -868,11 +879,11 @@
   <header id="header">
     <div class="container header-container">
       <a href="#" class="logo">MW</a>
-      
+
       <button class="nav-toggle" id="navToggle" aria-label="Toggle Navigation">
         <i class="fas fa-bars"></i>
       </button>
-      
+
       <nav class="desktop-nav">
         <a href="#home">Home</a>
         <a href="#about">About</a>
@@ -881,7 +892,7 @@
         <a href="#contact">Contact</a>
       </nav>
     </div>
-    
+
     <nav class="mobile-nav" id="mobileNav">
       <div class="container">
         <a href="#home">Home</a>
@@ -892,7 +903,7 @@
       </div>
     </nav>
   </header>
-  
+
   <!-- Hero Section -->
   <section id="home" class="hero">
     <div class="container">
@@ -908,25 +919,28 @@
             <a href="#contact" class="cta-button">Get In Touch</a>
           </div>
         </div>
-        
+
         <div class="hero-image">
           <img src="./assets/mw3.png" alt="Mike - Portrait" class="hero-portrait">
         </div>
       </div>
     </div>
   </section>
-  
+
   <!-- About Section -->
   <section id="about" class="bg-light">
     <div class="container">
       <div class="section-header">
         <h2 class="section-title">About Me</h2>
         <div class="section-divider"></div>
-        <p class="section-description">My background, philosophy, and what drives me</p>
+        <p class="section-description">I always found myself surrounded by the smartest people. What does that say about me?</p>
       </div>
-      
-      <div class="about-grid">
-        <div class="bio-content">
+
+      <div class="bio-content">
+          <figure style="float: right; margin: 0 0 1rem 2rem; max-width: 400px;">
+            <img src="./assets/vectrex.jpg" alt="Vectrex Gaming System" style="width: 100%; border-radius: 0.5rem; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);">
+            <figcaption style="text-align: center; font-size: 0.875rem; color: var(--text-secondary); margin-top: 0.5rem;">Playing my father's Vectrex gaming console</figcaption>
+          </figure>
           <p class="bio-paragraph">
             My fascination with technology began in the 80's with a Commodore 64 and later an IBM 386, alongside my father's Vectrex. While initially captivated by the games, my interest deepened after moving to California in 1995 at 18 to work at Sun Microsystems. It was there, where my father was a mechanical engineer, that he told me they were hiring for Desktop Manufacturing.
           </p>
@@ -934,62 +948,61 @@
             At the time, there was a buzz at Sun about the upcoming "JAVA" product - the buildings had big purple signs eveywhere with the name. I eventually moved to Server Manufacturing with a growing desire to understand and work with that technology.
           </p>
           <p class="bio-paragraph">
-            After advancing to technical leadership at Sun, I transitioned to Siebel Systems for a couple of years. Later, I took a life-changing leap into freelance technical consulting, developing relationships with companies like Intel, AMD, and other tech leaders.
+            This early exposure at Sun ignited a career path that led me to roles at Xerox and eventually Siebel Systems in San Mateo. I joined Siebel during it's <a href="https://www.latimes.com/archives/la-xpm-2000-jul-31-fi-61937-story.html" class="green-link">Fastest Growing Company in the US</a> period, working in IT and then Engineering - an incredible experience.
           </p>
           <p class="bio-paragraph">
-            Today, with over three decades in the industry, I've been fortunate to work in diverse roles from manufacturing to consulting to executive management, acquiring a deep understanding of how technology works, how to effectively manage teams, and how to build companies that drive innovation. I now run LIFTOFF Digital, bringing long-standing relationships in the industry together with the latest in automation and AI technologies.
+            My interest in web design, sparked during my time at Siebel, prompted a move to San Luis Obispo in 2001, where I immersed myself in the field.
+          </p>
+          <p class="bio-paragraph">
+            Since then, I have remained in the web development industry, initially focusing on design and front-end work. This journey culminated in 2005 with the co-founding of our company, where I currently serve as CEO and Owner, a testament to my long-standing passion for technology that began with a Commodore 64 in my childhood.
           </p>
         </div>
-        
-        <div class="about-image-container">
-          <img src="./assets/vectrex.jpg" alt="Vectrex Gaming System" style="max-width: 100%; border-radius: 0.5rem; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);">
-        </div>
       </div>
-      
+
       <div class="values-interests">
         <div class="values-container">
           <h3 class="container-title">Core Values</h3>
           <div class="values-list">
             <div class="value-item">
-              <i class="fas fa-gem"></i>
+              <span style="color: hsl(var(--forest));">&gt;</span>
               <span>Curiosity</span>
             </div>
             <div class="value-item">
-              <i class="fas fa-user-shield"></i>
+              >
               <span>Self-Reliance</span>
             </div>
             <div class="value-item">
-              <i class="fas fa-sync-alt"></i>
+              >
               <span>Adaptability</span>
             </div>
           </div>
         </div>
-        
+
         <div class="interests-container">
           <h3 class="container-title">Interests</h3>
           <div class="interests-grid">
             <div class="interest-item">
-              <i class="fas fa-robot"></i>
+              >
               <span>Emerging AI Tech</span>
             </div>
             <div class="interest-item">
-              <i class="fas fa-cogs"></i>
+              >
               <span>Automation</span>
             </div>
             <div class="interest-item">
-              <i class="fas fa-users"></i>
+              >
               <span>Time with Friends/Family</span>
             </div>
             <div class="interest-item">
-              <i class="fas fa-football-ball"></i>
+              >
               <span>Go Ducks!</span>
             </div>
             <div class="interest-item">
-              <i class="fas fa-book"></i>
+              >
               <span>Reading</span>
             </div>
             <div class="interest-item">
-              <i class="fas fa-gamepad"></i>
+              >
               <span>Video Games</span>
             </div>
           </div>
@@ -997,7 +1010,7 @@
       </div>
     </div>
   </section>
-  
+
   <!-- Experience Section -->
   <section id="experience">
     <div class="container">
@@ -1005,10 +1018,10 @@
         <h2 class="section-title">Journey</h2>
         <div class="section-divider"></div>
         <p class="section-description">
-          Technology leadership and innovation since 1997
+          Over three decades in the tech industry
         </p>
       </div>
-      
+
       <div class="experience-container">
         <div class="experience-card">
           <div class="experience-grid">
@@ -1021,18 +1034,18 @@
                   <h3 class="experience-title">CEO & Founder</h3>
                   <h4 class="experience-company">LIFTOFF Digital</h4>
                 </div>
-                <span class="experience-period">2017 - Present</span>
+                <span class="experience-period">2005 - Present</span>
               </div>
-              
+
               <div class="experience-details">
-                <p>Founded LIFTOFF Digital to help mid-market organizations leverage enterprise-level automation and process optimization.</p>
-                <p>Developed signature offerings that combine best-of-breed technologies with seasoned expertise to deliver comprehensive solutions.</p>
-                <p>Built a culture focused on measurable client outcomes rather than billable hours and service retainers.</p>
+                <p>After my partner of 14 years left, I've been running LIFTOFF since 2019 as the CEO and Owner overseeing a diverse clientbase.</p>
+                <p>LIFTOFF has serviced small to medium sized business since 2005.</p>
+                <p>Most of that time we were based in San Luis Obispo, California until COVID began when we went fully remote.</p>
               </div>
             </div>
           </div>
         </div>
-        
+
         <div class="experience-card">
           <div class="experience-grid">
             <div class="experience-logo">
@@ -1041,44 +1054,42 @@
             <div class="experience-content">
               <div class="experience-header">
                 <div>
-                  <h3 class="experience-title">VP of Technology</h3>
+                  <h3 class="experience-title">Design/Front-End</h3>
                   <h4 class="experience-company">TechXpress, Inc</h4>
                 </div>
-                <span class="experience-period">2010 - 2017</span>
+                <span class="experience-period">2004 - 2005</span>
               </div>
-              
+
               <div class="experience-details">
-                <p>Led engineering and product development for an MSP and web development agency serving mid-market businesses.</p>
-                <p>Implemented agile methodologies that reduced delivery times by 40% while improving quality metrics.</p>
-                <p>Developed a proprietary services automation platform that increased operational efficiency by 35%.</p>
+                <p>TechXpress was the first company I worked for creating web designs, and eventually moving into front-end development.</p>
+                <p>It was during this time that my hobby of SEO (Search Engine Optimization) became part of my job as well, where I created the SEO process we turned into a product.</p>
               </div>
             </div>
           </div>
         </div>
-        
+
         <div class="experience-card">
           <div class="experience-grid">
             <div class="experience-logo">
-              <img src="./assets/logo-freelance.svg" alt="Freelance Consultant logo">
+              <img src="./attached_assets/laptop-icon.png" alt="Freelance Consultant logo">
             </div>
             <div class="experience-content">
               <div class="experience-header">
                 <div>
-                  <h3 class="experience-title">Senior Technical Consultant</h3>
+                  <h3 class="experience-title">Web Design + Front End Development</h3>
                   <h4 class="experience-company">Freelance</h4>
                 </div>
-                <span class="experience-period">2002 - 2010</span>
+                <span class="experience-period">2001 - 2004</span>
               </div>
-              
+
               <div class="experience-details">
-                <p>Provided strategic consulting services to Fortune 500 companies including Intel, AMD, and other technology leaders.</p>
-                <p>Specialized in systems integration, technical architecture, and complex process automation.</p>
-                <p>Delivered mission-critical projects with a 100% success rate across diverse technical environments.</p>
+                <p>During this period, I was living in Photoshop, creating websites for friends and family - my uncles real estate business being my very first paying job in web development.</p>
+                <p>It was also during this period I began to explore SEO.</p>
               </div>
             </div>
           </div>
         </div>
-        
+
         <div class="experience-card">
           <div class="experience-grid">
             <div class="experience-logo">
@@ -1087,21 +1098,21 @@
             <div class="experience-content">
               <div class="experience-header">
                 <div>
-                  <h3 class="experience-title">Technical Operations Manager</h3>
-                  <h4 class="experience-company">Siebel Systems</h4>
+                  <h3 class="experience-title">IT + QA Engineering</h3>
+                  <h4 class="experience-company">Siebel Systems (Oracle)</h4>
                 </div>
-                <span class="experience-period">1999 - 2002</span>
+                <span class="experience-period">1999 - 2001</span>
               </div>
-              
+
               <div class="experience-details">
-                <p>Managed critical infrastructure supporting Siebel's global engineering operations during a period of rapid growth.</p>
-                <p>Implemented new technical standards that reduced system failures by 65% while cutting operational costs.</p>
-                <p>Led team of 12 engineers responsible for maintaining 99.99% uptime for development environments.</p>
+                <p>At Siebel systems I initially worked IT at headquarters, assisting in the setup and deployment of laptops for onsite staff.</p>
+                <p>I would eventually move into QA Engineering where I helped managed servers in the various datacenters onsite.</p>
+                <p>I even met Tom Siebel in his office on one occassion!</p>
               </div>
             </div>
           </div>
         </div>
-        
+
         <div class="experience-card">
           <div class="experience-grid">
             <div class="experience-logo">
@@ -1110,16 +1121,15 @@
             <div class="experience-content">
               <div class="experience-header">
                 <div>
-                  <h3 class="experience-title">Systems Engineer</h3>
-                  <h4 class="experience-company">Sun Microsystems</h4>
+                  <h3 class="experience-title">Server + Desktop Manufacturing</h3>
+                  <h4 class="experience-company">Sun Microsystems (Oracle)</h4>
                 </div>
-                <span class="experience-period">1997 - 1999</span>
+                <span class="experience-period">1995 - 1999</span>
               </div>
-              
+
               <div class="experience-details">
-                <p>Advanced from manufacturing technician to systems engineering role through demonstrated technical aptitude.</p>
-                <p>Developed automated testing framework that reduced QA cycles by 40% for server manufacturing.</p>
-                <p>Recipient of two innovation awards for process improvements in manufacturing operations.</p>
+                <p>Fresh out of highschool, I began my career here building and testing SPARCstation desktop units.</p>
+                <p>Later I switched to Server Manufacturing where I build entire server racks (Enterprise 5000's, among others), installing rails, power, fiber cabling, and of course the various servers and storage units that would be placed into rails within.</p>
               </div>
             </div>
           </div>
@@ -1127,7 +1137,7 @@
       </div>
     </div>
   </section>
-  
+
   <!-- Skills Section -->
   <section id="skills" class="bg-light">
     <div class="container">
@@ -1135,28 +1145,11 @@
         <h2 class="section-title">Focus</h2>
         <div class="section-divider"></div>
         <p class="section-description">
-          Areas where I bring the most value
+          Following my passion for technology wherever it leads me
         </p>
       </div>
-      
+
       <div class="skills-grid">
-        <div class="skill-card">
-          <div class="skill-header">
-            <div class="skill-icon">
-              <i class="fas fa-cogs"></i>
-            </div>
-            <h3 class="skill-title">Technology Strategy</h3>
-          </div>
-          <p class="skill-description">
-            Aligning technology investments with business goals to create sustainable competitive advantages and drive innovation.
-          </p>
-          <div class="skill-tags">
-            <span class="skill-tag">Digital Transformation</span>
-            <span class="skill-tag">Technology Roadmapping</span>
-            <span class="skill-tag">Enterprise Architecture</span>
-          </div>
-        </div>
-        
         <div class="skill-card">
           <div class="skill-header">
             <div class="skill-icon">
@@ -1173,7 +1166,7 @@
             <span class="skill-tag">AI Integration</span>
           </div>
         </div>
-        
+
         <div class="skill-card">
           <div class="skill-header">
             <div class="skill-icon">
@@ -1186,28 +1179,10 @@
           </p>
           <div class="skill-tags">
             <span class="skill-tag">Technical Mentorship</span>
-            <span class="skill-tag">Agile Methodologies</span>
             <span class="skill-tag">Talent Development</span>
           </div>
         </div>
-        
-        <div class="skill-card">
-          <div class="skill-header">
-            <div class="skill-icon">
-              <i class="fas fa-project-diagram"></i>
-            </div>
-            <h3 class="skill-title">Systems Integration</h3>
-          </div>
-          <p class="skill-description">
-            Connecting disparate systems and data sources to create unified platforms that enable better decision-making and operational efficiency.
-          </p>
-          <div class="skill-tags">
-            <span class="skill-tag">API Development</span>
-            <span class="skill-tag">Middleware Solutions</span>
-            <span class="skill-tag">Data Flow Optimization</span>
-          </div>
-        </div>
-        
+
         <div class="skill-card">
           <div class="skill-header">
             <div class="skill-icon">
@@ -1224,27 +1199,10 @@
             <span class="skill-tag">R&D Strategy</span>
           </div>
         </div>
-        
-        <div class="skill-card">
-          <div class="skill-header">
-            <div class="skill-icon">
-              <i class="fas fa-chart-line"></i>
-            </div>
-            <h3 class="skill-title">Business Analytics</h3>
-          </div>
-          <p class="skill-description">
-            Leveraging data-driven insights to optimize business operations, improve customer experiences, and identify new opportunities.
-          </p>
-          <div class="skill-tags">
-            <span class="skill-tag">BI Solutions</span>
-            <span class="skill-tag">Predictive Analytics</span>
-            <span class="skill-tag">Data Visualization</span>
-          </div>
-        </div>
       </div>
     </div>
   </section>
-  
+
   <!-- Contact Section -->
   <section id="contact">
     <div class="container">
@@ -1255,7 +1213,7 @@
           I'm always open to discussing technology and AI innovations
         </p>
       </div>
-      
+
       <div class="contact-container">
         <div class="contact-info">
           <div>
@@ -1264,7 +1222,7 @@
               Feel free to reach out if you're looking for guidance on technology strategy, automation implementations, or just want to connect about the future of tech.
             </p>
           </div>
-          
+
           <div class="contact-details">
             <div class="contact-item">
               <div class="contact-icon">
@@ -1275,7 +1233,7 @@
                 <span class="contact-value">mike@gainliftoff.com</span>
               </div>
             </div>
-            
+
             <div class="contact-item">
               <div class="contact-icon">
                 <i class="fas fa-map-marker-alt"></i>
@@ -1285,17 +1243,17 @@
                 <span class="contact-value">Eugene, Oregon</span>
               </div>
             </div>
-            
+
             <div class="contact-item">
               <div class="contact-icon">
                 <i class="fab fa-linkedin-in"></i>
               </div>
               <div class="contact-text">
                 <span class="contact-label">LinkedIn</span>
-                <span class="contact-value">/mike-wiemholt</span>
+                <a href="https://www.linkedin.com/in/mike-wiemholt/" target="_blank" rel="noopener noreferrer"><span class="contact-value">/mike-wiemholt</span></a>
               </div>
             </div>
-            
+
             <div class="contact-item">
               <div class="contact-icon">
                 <i class="fas fa-briefcase"></i>
@@ -1307,35 +1265,35 @@
             </div>
           </div>
         </div>
-        
+
         <div class="contact-form-container">
           <form id="contactForm" class="contact-form">
             <div class="form-group">
               <label for="name" class="form-label">Name</label>
               <input type="text" id="name" name="name" class="form-control" required>
             </div>
-            
+
             <div class="form-group">
               <label for="email" class="form-label">Email</label>
               <input type="email" id="email" name="email" class="form-control" required>
             </div>
-            
+
             <div class="form-group">
               <label for="subject" class="form-label">Subject</label>
               <input type="text" id="subject" name="subject" class="form-control" required>
             </div>
-            
+
             <div class="form-group">
               <label for="message" class="form-label">Message</label>
               <textarea id="message" name="message" class="form-control" required></textarea>
             </div>
-            
+
             <button type="submit" class="form-button">Send Message</button>
-            
+
             <div id="formSuccess" class="form-message success" style="display: none;">
               Your message has been sent successfully. I'll get back to you soon!
             </div>
-            
+
             <div id="formError" class="form-message error" style="display: none;">
               There was an error sending your message. Please try again later.
             </div>
@@ -1344,12 +1302,12 @@
       </div>
     </div>
   </section>
-  
+
   <!-- Footer -->
   <footer>
     <div class="container footer-container">
       <a href="#" class="footer-logo">MW</a>
-      
+
       <nav class="footer-nav">
         <a href="#home">Home</a>
         <a href="#about">About</a>
@@ -1357,7 +1315,7 @@
         <a href="#skills">Focus</a>
         <a href="#contact">Contact</a>
       </nav>
-      
+
       <div class="social-links">
         <a href="https://www.linkedin.com/in/mike-wiemholt/" class="social-link" target="_blank" rel="noopener noreferrer">
           <i class="fab fa-linkedin-in"></i>
@@ -1372,22 +1330,22 @@
           <i class="fab fa-medium-m"></i>
         </a>
       </div>
-      
+
       <p class="copyright">© 2025 Mike. All rights reserved. Mike made this site for fun using Replit!</p>
     </div>
   </footer>
-  
+
   <script>
     // Mobile Menu Toggle
     document.addEventListener('DOMContentLoaded', function() {
       const navToggle = document.getElementById('navToggle');
       const mobileNav = document.getElementById('mobileNav');
       const header = document.getElementById('header');
-      
+
       navToggle.addEventListener('click', function() {
         mobileNav.classList.toggle('show');
       });
-      
+
       // Close mobile menu when clicking on a link
       const mobileLinks = mobileNav.querySelectorAll('a');
       mobileLinks.forEach(link => {
@@ -1395,7 +1353,7 @@
           mobileNav.classList.remove('show');
         });
       });
-      
+
       // Add shadow to header on scroll
       window.addEventListener('scroll', function() {
         if (window.scrollY > 10) {
@@ -1404,50 +1362,83 @@
           header.classList.remove('scrolled');
         }
       });
-      
+
       // Contact Form Handling
       const contactForm = document.getElementById('contactForm');
       const formSuccess = document.getElementById('formSuccess');
       const formError = document.getElementById('formError');
-      
+
       if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
           e.preventDefault();
-          
+
           // Get form data
           const name = document.getElementById('name').value;
           const email = document.getElementById('email').value;
           const subject = document.getElementById('subject').value;
           const message = document.getElementById('message').value;
-          
-          // In a real implementation, you would send this data to your server
-          // For demo purposes, we'll just show a success message
-          
-          // Simulate form submission
-          setTimeout(function() {
-            // Hide any previous messages
-            formSuccess.style.display = 'block';
-            formError.style.display = 'none';
-            
-            // Reset the form
-            contactForm.reset();
-            
-            // Hide success message after 5 seconds
-            setTimeout(function() {
+
+          // Airtable Configuration
+          const airtableBaseId = 'appSyVYFGtpLH3GQd';
+          const airtableTableId = 'tbltxLfKnGbgKqLS7';
+          const airtablePAT = 'patV9O0jRPrLjXQtI';
+
+          // Construct Airtable URL
+          const airtableURL = `https://api.airtable.com/v0/${airtableBaseId}/${airtableTableId}`;
+
+          // Construct Payload
+          const payload = {
+            records: [{
+              fields: {
+                Name: name,
+                Email: email,
+                Subject: subject,
+                Message: message
+              }
+            }]
+          };
+
+          // Make the request
+          fetch(airtableURL, {
+              method: 'POST',
+              headers: {
+                  'Authorization': `Bearer patV9O0jRPrLjXQtI`,
+                  'Content-Type': 'application/json',
+                  'Accept': 'application/json'
+              },
+              body: JSON.stringify(payload)
+          })
+          .then(response => response.json())
+          .then(data => {
+              console.log('Success:', data);
+              // Hide any previous messages
+              formSuccess.style.display = 'block';
+              formError.style.display = 'none';
+
+              // Reset the form
+              contactForm.reset();
+
+              // Hide success message after 5 seconds
+              setTimeout(function() {
+                formSuccess.style.display = 'none';
+              }, 5000);
+          })
+          .catch((error) => {
+              console.error('Error:', error);
+              formError.style.display = 'block';
               formSuccess.style.display = 'none';
-            }, 5000);
-          }, 1000);
+          });
         });
       }
-      
+
       // Smooth scrolling for anchor links
       document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
           e.preventDefault();
-          
+
           const targetId = this.getAttribute('href').substring(1);
           if (!targetId) return; // Skip if href is just "#"
-          
+
           const targetElement = document.getElementById(targetId);
           if (targetElement) {
             window.scrollTo({
