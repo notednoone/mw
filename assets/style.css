@@ -359,6 +359,19 @@
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   }
 
+  @media only screen and (max-width: 500px) {
+    #bio-image {
+      display:block;
+      width:100%;
+      max-width:100%;
+    }
+
+     #bio-image img {
+       box-shadow:0;
+     }
+    
+  }
+
   .bio-paragraph {
     font-size: 1.05rem;
     color: rgba(51, 51, 51, 0.9);
