@@ -467,13 +467,10 @@
 
             <button type="submit" class="form-button">Send Message</button>
 
-            <div id="formSuccess" class="form-message success" style="display: none;">
+            <div id="thankYouMessage" class="form-message success" style="display: none;">
               Your message has been sent successfully. I'll get back to you soon!
             </div>
 
-            <div id="formError" class="form-message error" style="display: none;">
-              There was an error sending your message. Please try again later.
-            </div>
           </form>
         </div>
       </div>
@@ -505,6 +502,34 @@
   </footer>
 
   <script>
+
+    // Form Submission Thanks
+    const form = document.getElementById('contactForm');
+    const thankYouMessage = document.getElementById('thankYouMessage');
+  
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault(); // Prevent the default page reload
+  
+      const formData = new FormData(form);
+      const data = new URLSearchParams(formData);
+  
+      try {
+        const response = await fetch('https://gainliftoff.app.n8n.cloud/webhook/58f2b924-6f87-4952-92d9-f838322194a5', {
+          method: 'POST',
+          body: data,
+        });
+  
+        if (response.ok) {
+          form.style.display = 'none'; // Hide the form
+          thankYouMessage.style.display = 'block'; // Show thank you message
+        } else {
+          alert('There was a problem submitting your form.');
+        }
+      } catch (error) {
+        alert('An error occurred. Please try again later.');
+      }
+    });
+    
     // Mobile Menu Toggle
     document.addEventListener('DOMContentLoaded', function () {
       const navToggle = document.getElementById('navToggle');
