@@ -509,7 +509,7 @@
     const thankYouMessage = document.getElementById('thankYouMessage');
   
     form.addEventListener('submit', async (e) => {
-      e.preventDefault(); // Prevent the default page reload
+      e.preventDefault();
   
       const formData = new FormData(form);
       const data = new URLSearchParams(formData);
@@ -521,8 +521,10 @@
         });
   
         if (response.ok) {
-          form.style.display = 'none'; // Hide the form
-          thankYouMessage.style.display = 'block'; // Show thank you message
+          // Instead of hiding the form, just show the message
+          thankYouMessage.style.display = 'block';
+          // Optionally, reset the form fields:
+          form.reset();
         } else {
           alert('There was a problem submitting your form.');
         }
