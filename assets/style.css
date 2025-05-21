@@ -347,6 +347,18 @@
     display: block;
   }
 
+  #bio-image {
+    float: right;
+    margin: 0 0 1rem 2rem;
+    max-width: 400px;
+  }
+
+  #bio-image img {
+    width: 100%;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  }
+
   .bio-paragraph {
     font-size: 1.05rem;
     color: rgba(51, 51, 51, 0.9);
