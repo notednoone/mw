@@ -359,25 +359,25 @@
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   }
 
-    @media only screen and (max-width: 768px) {
-      #bio-image {
-        display:block;
-        width:100%;
-        max-width:100%;
-      }
-  
-       #bio-image img {
-         box-shadow:0;
-       }
+  #bio-image figcaption {
+    text-align: center;
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-top: 0.5rem;
+  }
 
-      #bio-image figcaption {
-        text-align: center;
-        font-size: 0.875rem;
-        color: var(--text-secondary);
-        margin-top: 0.5rem;
-      }
-      
+  @media only screen and (max-width: 768px) {
+    #bio-image {
+      display:block;
+      width:100%;
+      max-width:100%;
     }
+
+     #bio-image img {
+       box-shadow:0;
+     }
+
+  }
 
   .bio-paragraph {
     font-size: 1.05rem;
