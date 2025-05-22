@@ -163,7 +163,7 @@
 
   /* Hero Section */
   .hero {
-    padding: 3rem 0 2rem; /* was 3 0 5 */
+    padding: 3rem 0 5rem;
   }
 
   @media (min-width: 768px) {
@@ -188,7 +188,7 @@
   .hero-content {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 0.7rem;
   }
 
   .hero-greeting {
