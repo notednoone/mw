@@ -163,7 +163,7 @@
 
   /* Hero Section */
   .hero {
-    padding: 3rem 0 5rem;
+    padding: 3rem 0 2rem; /* was 3 0 5 */
   }
 
   @media (min-width: 768px) {
