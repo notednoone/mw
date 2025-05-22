@@ -369,6 +369,13 @@
        #bio-image img {
          box-shadow:0;
        }
+
+      #bio-image figcaption {
+        text-align: center;
+        font-size: 0.875rem;
+        color: var(--text-secondary);
+        margin-top: 0.5rem;
+      }
       
     }
 
