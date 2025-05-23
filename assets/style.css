@@ -121,6 +121,7 @@
 
     .desktop-nav a:hover {
       color: hsl(var(--forest));
+      text-decration:none;
     }
 
     .desktop-nav a::after {
