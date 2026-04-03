@@ -27,6 +27,9 @@
       }
     });
     
+    // Dynamic copyright year
+    document.getElementById('copyright-year').textContent = new Date().getFullYear();
+
     // Mobile Menu Toggle
     document.addEventListener('DOMContentLoaded', function () {
       const navToggle = document.getElementById('navToggle');
