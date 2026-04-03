@@ -1,32 +1,3 @@
-    // Form Submission Thanks
-    const form = document.getElementById('contactForm');
-    const thankYouMessage = document.getElementById('thankYouMessage');
-  
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-  
-      const formData = new FormData(form);
-      const data = new URLSearchParams(formData);
-  
-      try {
-        const response = await fetch('https://gainliftoff.app.n8n.cloud/webhook/e3cb5383-97cf-4aac-8fce-cbb25c631ad2', {
-          method: 'POST',
-          body: data,
-        });
-  
-        if (response.ok) {
-          // Instead of hiding the form, just show the message
-          thankYouMessage.style.display = 'block';
-          // Optionally, reset the form fields:
-          form.reset();
-        } else {
-          alert('There was a problem submitting your form.');
-        }
-      } catch (error) {
-        alert('An error occurred. Please try again later.');
-      }
-    });
-    
     // Mobile Menu Toggle
     document.addEventListener('DOMContentLoaded', function () {
       document.getElementById('copyright-year').textContent = new Date().getFullYear();
